@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34670B7F2B58B63100A270B0 /* PaperdollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670B7E2B58B63100A270B0 /* PaperdollApp.swift */; };
+		34670B812B58B63100A270B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670B802B58B63100A270B0 /* ContentView.swift */; };
+		34670B832B58B63300A270B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34670B822B58B63300A270B0 /* Assets.xcassets */; };
+		34670B862B58B63300A270B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34670B852B58B63300A270B0 /* Preview Assets.xcassets */; };
+		34670B882B58B63300A270B0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670B872B58B63300A270B0 /* Persistence.swift */; };
+		34670B8B2B58B63300A270B0 /* Paperdoll.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34670B892B58B63300A270B0 /* Paperdoll.xcdatamodeld */; };
+		34670B952B58B63300A270B0 /* PaperdollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670B942B58B63300A270B0 /* PaperdollTests.swift */; };
+		34670B9F2B58B63300A270B0 /* PaperdollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670B9E2B58B63300A270B0 /* PaperdollUITests.swift */; };
+		34670BA12B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34670B912B58B63300A270B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34670B732B58B63100A270B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34670B7A2B58B63100A270B0;
+			remoteInfo = Paperdoll;
+		};
+		34670B9B2B58B63300A270B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34670B732B58B63100A270B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34670B7A2B58B63100A270B0;
+			remoteInfo = Paperdoll;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34670B7B2B58B63100A270B0 /* Paperdoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paperdoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34670B7E2B58B63100A270B0 /* PaperdollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollApp.swift; sourceTree = "<group>"; };
+		34670B802B58B63100A270B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		34670B822B58B63300A270B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34670B852B58B63300A270B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		34670B872B58B63300A270B0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		34670B8A2B58B63300A270B0 /* Paperdoll.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Paperdoll.xcdatamodel; sourceTree = "<group>"; };
+		34670B902B58B63300A270B0 /* PaperdollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperdollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34670B942B58B63300A270B0 /* PaperdollTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollTests.swift; sourceTree = "<group>"; };
+		34670B9A2B58B63300A270B0 /* PaperdollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperdollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34670B9E2B58B63300A270B0 /* PaperdollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollUITests.swift; sourceTree = "<group>"; };
+		34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34670B782B58B63100A270B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34670B8D2B58B63300A270B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34670B972B58B63300A270B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34670B722B58B63100A270B0 = {
+			isa = PBXGroup;
+			children = (
+				34670B7D2B58B63100A270B0 /* Paperdoll */,
+				34670B932B58B63300A270B0 /* PaperdollTests */,
+				34670B9D2B58B63300A270B0 /* PaperdollUITests */,
+				34670B7C2B58B63100A270B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34670B7C2B58B63100A270B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34670B7B2B58B63100A270B0 /* Paperdoll.app */,
+				34670B902B58B63300A270B0 /* PaperdollTests.xctest */,
+				34670B9A2B58B63300A270B0 /* PaperdollUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34670B7D2B58B63100A270B0 /* Paperdoll */ = {
+			isa = PBXGroup;
+			children = (
+				34670B7E2B58B63100A270B0 /* PaperdollApp.swift */,
+				34670B802B58B63100A270B0 /* ContentView.swift */,
+				34670B822B58B63300A270B0 /* Assets.xcassets */,
+				34670B872B58B63300A270B0 /* Persistence.swift */,
+				34670B892B58B63300A270B0 /* Paperdoll.xcdatamodeld */,
+				34670B842B58B63300A270B0 /* Preview Content */,
+			);
+			path = Paperdoll;
+			sourceTree = "<group>";
+		};
+		34670B842B58B63300A270B0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				34670B852B58B63300A270B0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		34670B932B58B63300A270B0 /* PaperdollTests */ = {
+			isa = PBXGroup;
+			children = (
+				34670B942B58B63300A270B0 /* PaperdollTests.swift */,
+			);
+			path = PaperdollTests;
+			sourceTree = "<group>";
+		};
+		34670B9D2B58B63300A270B0 /* PaperdollUITests */ = {
+			isa = PBXGroup;
+			children = (
+				34670B9E2B58B63300A270B0 /* PaperdollUITests.swift */,
+				34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */,
+			);
+			path = PaperdollUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34670B7A2B58B63100A270B0 /* Paperdoll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34670BA42B58B63300A270B0 /* Build configuration list for PBXNativeTarget "Paperdoll" */;
+			buildPhases = (
+				34670B772B58B63100A270B0 /* Sources */,
+				34670B782B58B63100A270B0 /* Frameworks */,
+				34670B792B58B63100A270B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Paperdoll;
+			productName = Paperdoll;
+			productReference = 34670B7B2B58B63100A270B0 /* Paperdoll.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34670B8F2B58B63300A270B0 /* PaperdollTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34670BA72B58B63300A270B0 /* Build configuration list for PBXNativeTarget "PaperdollTests" */;
+			buildPhases = (
+				34670B8C2B58B63300A270B0 /* Sources */,
+				34670B8D2B58B63300A270B0 /* Frameworks */,
+				34670B8E2B58B63300A270B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34670B922B58B63300A270B0 /* PBXTargetDependency */,
+			);
+			name = PaperdollTests;
+			productName = PaperdollTests;
+			productReference = 34670B902B58B63300A270B0 /* PaperdollTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		34670B992B58B63300A270B0 /* PaperdollUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34670BAA2B58B63300A270B0 /* Build configuration list for PBXNativeTarget "PaperdollUITests" */;
+			buildPhases = (
+				34670B962B58B63300A270B0 /* Sources */,
+				34670B972B58B63300A270B0 /* Frameworks */,
+				34670B982B58B63300A270B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34670B9C2B58B63300A270B0 /* PBXTargetDependency */,
+			);
+			name = PaperdollUITests;
+			productName = PaperdollUITests;
+			productReference = 34670B9A2B58B63300A270B0 /* PaperdollUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34670B732B58B63100A270B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					34670B7A2B58B63100A270B0 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					34670B8F2B58B63300A270B0 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 34670B7A2B58B63100A270B0;
+					};
+					34670B992B58B63300A270B0 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 34670B7A2B58B63100A270B0;
+					};
+				};
+			};
+			buildConfigurationList = 34670B762B58B63100A270B0 /* Build configuration list for PBXProject "Paperdoll" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34670B722B58B63100A270B0;
+			productRefGroup = 34670B7C2B58B63100A270B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34670B7A2B58B63100A270B0 /* Paperdoll */,
+				34670B8F2B58B63300A270B0 /* PaperdollTests */,
+				34670B992B58B63300A270B0 /* PaperdollUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34670B792B58B63100A270B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34670B862B58B63300A270B0 /* Preview Assets.xcassets in Resources */,
+				34670B832B58B63300A270B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34670B8E2B58B63300A270B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34670B982B58B63300A270B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34670B772B58B63100A270B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34670B882B58B63300A270B0 /* Persistence.swift in Sources */,
+				34670B8B2B58B63300A270B0 /* Paperdoll.xcdatamodeld in Sources */,
+				34670B812B58B63100A270B0 /* ContentView.swift in Sources */,
+				34670B7F2B58B63100A270B0 /* PaperdollApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34670B8C2B58B63300A270B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34670B952B58B63300A270B0 /* PaperdollTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34670B962B58B63300A270B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34670BA12B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift in Sources */,
+				34670B9F2B58B63300A270B0 /* PaperdollUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34670B922B58B63300A270B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34670B7A2B58B63100A270B0 /* Paperdoll */;
+			targetProxy = 34670B912B58B63300A270B0 /* PBXContainerItemProxy */;
+		};
+		34670B9C2B58B63300A270B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34670B7A2B58B63100A270B0 /* Paperdoll */;
+			targetProxy = 34670B9B2B58B63300A270B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		34670BA22B58B63300A270B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		34670BA32B58B63300A270B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34670BA52B58B63300A270B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Paperdoll/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paperdoll.Paperdoll;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34670BA62B58B63300A270B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Paperdoll/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paperdoll.Paperdoll;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34670BA82B58B63300A270B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paperdoll.PaperdollTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paperdoll.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Paperdoll";
+			};
+			name = Debug;
+		};
+		34670BA92B58B63300A270B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paperdoll.PaperdollTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paperdoll.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Paperdoll";
+			};
+			name = Release;
+		};
+		34670BAB2B58B63300A270B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paperdoll.PaperdollUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Paperdoll;
+			};
+			name = Debug;
+		};
+		34670BAC2B58B63300A270B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paperdoll.PaperdollUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Paperdoll;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34670B762B58B63100A270B0 /* Build configuration list for PBXProject "Paperdoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34670BA22B58B63300A270B0 /* Debug */,
+				34670BA32B58B63300A270B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34670BA42B58B63300A270B0 /* Build configuration list for PBXNativeTarget "Paperdoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34670BA52B58B63300A270B0 /* Debug */,
+				34670BA62B58B63300A270B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34670BA72B58B63300A270B0 /* Build configuration list for PBXNativeTarget "PaperdollTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34670BA82B58B63300A270B0 /* Debug */,
+				34670BA92B58B63300A270B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34670BAA2B58B63300A270B0 /* Build configuration list for PBXNativeTarget "PaperdollUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34670BAB2B58B63300A270B0 /* Debug */,
+				34670BAC2B58B63300A270B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		34670B892B58B63300A270B0 /* Paperdoll.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				34670B8A2B58B63300A270B0 /* Paperdoll.xcdatamodel */,
+			);
+			currentVersion = 34670B8A2B58B63300A270B0 /* Paperdoll.xcdatamodel */;
+			path = Paperdoll.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 34670B732B58B63100A270B0 /* Project object */;
+}
