@@ -16,6 +16,7 @@
 		34670B952B58B63300A270B0 /* PaperdollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670B942B58B63300A270B0 /* PaperdollTests.swift */; };
 		34670B9F2B58B63300A270B0 /* PaperdollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670B9E2B58B63300A270B0 /* PaperdollUITests.swift */; };
 		34670BA12B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */; };
+		34670BAE2B59F10500A270B0 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BAD2B59F10500A270B0 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		34670B9A2B58B63300A270B0 /* PaperdollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperdollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34670B9E2B58B63300A270B0 /* PaperdollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollUITests.swift; sourceTree = "<group>"; };
 		34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34670BAD2B59F10500A270B0 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				34670B7E2B58B63100A270B0 /* PaperdollApp.swift */,
 				34670B802B58B63100A270B0 /* ContentView.swift */,
+				34670BAD2B59F10500A270B0 /* test.swift */,
 				34670B822B58B63300A270B0 /* Assets.xcassets */,
 				34670B872B58B63300A270B0 /* Persistence.swift */,
 				34670B892B58B63300A270B0 /* Paperdoll.xcdatamodeld */,
@@ -266,6 +269,7 @@
 				34670B882B58B63300A270B0 /* Persistence.swift in Sources */,
 				34670B8B2B58B63300A270B0 /* Paperdoll.xcdatamodeld in Sources */,
 				34670B812B58B63100A270B0 /* ContentView.swift in Sources */,
+				34670BAE2B59F10500A270B0 /* test.swift in Sources */,
 				34670B7F2B58B63100A270B0 /* PaperdollApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
