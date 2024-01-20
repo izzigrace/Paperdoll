@@ -12,11 +12,12 @@ import CoreData
 struct UserProfileView: View {
     
     @State private var buttonClicked = "closet"
+    @State private var location = -132
     
     var body: some View {
         NavigationView {
             ZStack {
-                VStack {
+                VStack { //profile information
                     // Profile Picture
                     Text("izzigrace") //later we'd do "@" + variable for user's username
                         .font(.headline)
@@ -32,6 +33,7 @@ struct UserProfileView: View {
                             
                             Text("followers")
                                 .font(.system(size: 14))
+                                .fontWeight(.light)
                                 .frame(width: 90)
                         }
                         
@@ -56,11 +58,12 @@ struct UserProfileView: View {
                                 .fontWeight(.semibold)
                             
                             Text("items")
+                                .fontWeight(.thin)
                                 .frame(width: 83)
                                 .font(.system(size: 14))
                         }
                         
-                    }
+                    } //end of hstack of followers profile pic etc
 
                     // User Information
                     Text("Little description of my profile, where my description will go")
@@ -73,7 +76,8 @@ struct UserProfileView: View {
 
 
                     Spacer()
-                }
+                } //end of first vstack profile information
+                
                 
                 Rectangle() // rectangle behind all posts and buttons
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
@@ -83,53 +87,6 @@ struct UserProfileView: View {
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     .padding(.top, 185)
                     .edgesIgnoringSafeArea(.bottom)
-                
-                HStack { // this hstack contains all the buttons that take you to different profile sections
-                    NavigationLink(destination: ClosetView()) {
-                        Text("closet")
-                            .foregroundColor(.white)
-                            .font(.system(size: 13))
-                            .multilineTextAlignment(.leading)
-                            .frame(maxWidth: .infinity)
-                            .frame(width: 60, height: 25)
-                            .background(Color(UIColor(hex: "3c4f74")))
-                            .cornerRadius(19)
-                            .padding(.top, -202)
-                    } //end closet button
-                    
-                    NavigationLink(destination: OutfitsView()) {
-                        Text("outfits")
-                            .foregroundColor(.black)
-                            .font(.system(size: 13))
-                            .multilineTextAlignment(.leading)
-                            .frame(maxWidth: .infinity)
-                            .frame(width: 60, height: 25)
-//                            .background(Color(UIColor(hex: "3c4f74")))
-                            .cornerRadius(19)
-                            .padding(.top, -202)
-                    } //end outfits button
-                    
-                    Text("market")
-                        .foregroundColor(.black)
-                        .font(.system(size: 13))
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity)
-                        .frame(width: 60, height: 25)
-                        .cornerRadius(19)
-                        .padding(.top, -202)
-                    
-                    Text("wishlist")
-                        .foregroundColor(.black)
-                        .font(.system(size: 13))
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity)
-                        .frame(width: 60, height: 25)
-                        .cornerRadius(19)
-                        .padding(.top, -202)
-                    
-                    
-                } // end Hstack for navigation buttons
-                
                 
                 HStack { // stack of white rectangles
                     Rectangle()
@@ -149,9 +106,9 @@ struct UserProfileView: View {
                         .shadow(radius: 5)
                         .foregroundColor(.white)
                         .padding(.top, -167)
-                } // end of Hstack
+                } // end of Hstack white rectangles
                 
-                HStack { // stack of white rectangles
+                HStack { // stack of clothing images
                     Image("jeans")
                         .resizable() // Make the image resizable
                         .aspectRatio(contentMode: .fit)
@@ -169,21 +126,111 @@ struct UserProfileView: View {
                         .frame(width: 170, height: 160)
                         .cornerRadius(10)
                         .padding(.top, -167)
-                } // end of Hstack
+                        .onTapGesture {
+                            debugPrint("Image tapped!")
+                            // Add your onTapGesture code here
+                        }
+                        .allowsHitTesting(true)
+                } // end of Hstack clothes images
+                
+                
+                Rectangle() //moveable background indicating which button is selected
+                    .frame(maxWidth: .infinity)
+                    .frame(width: 60, height: 25)
+                    .foregroundColor(Color(UIColor(hex: "3c4f74")))
+                    .cornerRadius(19)
+                    .padding(.top, -202)
+                    .padding(.leading, CGFloat(location)) //CGFloat converts the variable -132 into the data type that padding expects, just using location without CGFloat will throw an error
+                
+                HStack { // this hstack contains all the buttons that take you to different profile sections
+
+                        Text("closet")
+                            .foregroundColor(buttonClicked == "closet" ? .white : .black)
+                            .font(.system(size: 13))
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity)
+                            .frame(width: 60, height: 25)
+//                            .background(Color(UIColor(hex: "3c4f74")))
+                            .cornerRadius(19)
+//                            .padding(.top, -202)
+                            .contentShape(Rectangle()) // Makes the entire content clickable
+                            .onTapGesture {
+                                withAnimation {
+                                    buttonClicked = "closet"
+                                    location = -132
+                                }
+                            }
+                            .allowsHitTesting(true) //do i need this? idk
+                            //end closet button
+                    
+                        Text("outfits")
+                            .zIndex(500)
+                            .foregroundColor(buttonClicked == "outfits" ? .white : .black)
+                            .font(.system(size: 13))
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity)
+                            .frame(width: 60, height: 25)
+//                            .background(Color(UIColor(hex: "3c4f74")))
+                            .cornerRadius(19)
+//                            .padding(.top, -202)
+                            .contentShape(Rectangle()) // Makes the entire content clickable
+                            .onTapGesture {
+                                withAnimation {
+                                    buttonClicked = "outfits"
+                                    location = -64
+                                }
+                            }.allowsHitTesting(true) //end outfits button
+                    
+                    
+                    Text("market")
+                        .foregroundColor(buttonClicked == "market" ? .white : .black)
+                        .font(.system(size: 13))
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity)
+                        .frame(width: 60, height: 25)
+                        .cornerRadius(19)
+//                        .padding(.top, -202)
+                        .contentShape(Rectangle()) // Makes the entire content clickable
+                        .onTapGesture {
+                            debugPrint("market clicked :0")
+                            withAnimation {
+                                buttonClicked = "market"
+                                location = 67
+                            }
+                        } //end outfits button //end market button
+
+                        Text("wishlist")
+                            .foregroundColor(buttonClicked == "wishlist" ? .white : .black)
+                            .font(.system(size: 13))
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity)
+                            .frame(width: 60, height: 25)
+                            .cornerRadius(19)
+                            .contentShape(Rectangle()) // Makes the entire content clickable
+                            .onTapGesture {
+                                withAnimation {
+                                    buttonClicked = "wishlist"
+                                    location = 204
+                                }
+                            }
+                            .allowsHitTesting(true)
+                            .zIndex(10)
+                            //end wishlist button
+                    
+                }
+                .padding(.bottom, 378)
+                .contentShape(Rectangle())
+                
+                
                 
             }
-            .edgesIgnoringSafeArea(.bottom)
+            .edgesIgnoringSafeArea(.bottom) //end first zstack
             
-            
-            
-//            .navigationBarTitleDisplayMode(.inline) // Set the display mode to inline
-//            .navigationBarTitle("@izzigrace") //later we'd do "@" + variable for user's username
-//            .font(.largeTitle) // Set the font size for the navigation title
         }
     }
 }
 
-struct ClosetView: View {
+struct ClosetView: View { // use these to switch between views of closet, outfits, etc later on with navigationLink s
     var body: some View {
         VStack {
         }
