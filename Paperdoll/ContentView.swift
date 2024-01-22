@@ -1,4 +1,6 @@
-//
+// this is the file that automatically populates when you make a new app on xcode. this is a good example of using built in UI features like lists and toolbars
+
+
 //  ContentView.swift
 //  Paperdoll
 //

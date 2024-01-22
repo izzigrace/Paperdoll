@@ -1,4 +1,6 @@
-//
+// this file also automatically comes with making a new app, this is the data handling functions using core data. we will make a new file to make our own data handling functions to fetch and input data, but this will be a good example for us when we do so
+
+
 //  Persistence.swift
 //  Paperdoll
 //

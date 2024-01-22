@@ -3,7 +3,7 @@
 //  Paperdoll
 //
 //  Created by Isabelle Smith on 1/19/24.
-//
+// general file for testing small swiftui features to get familiar with them. we will delete when deploying app
 
 import Foundation
 import SwiftUI
@@ -40,7 +40,7 @@ struct ContentView2: View {
 //                }
                 
                 
-            }
+            } // end zstack
             
         } // end navigation view
     }

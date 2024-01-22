@@ -17,7 +17,7 @@
 		34670B9F2B58B63300A270B0 /* PaperdollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670B9E2B58B63300A270B0 /* PaperdollUITests.swift */; };
 		34670BA12B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */; };
 		34670BAE2B59F10500A270B0 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BAD2B59F10500A270B0 /* test.swift */; };
-		34670BB12B5B9CFC00A270B0 /* anothertestfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BB02B5B9CFC00A270B0 /* anothertestfile.swift */; };
+		34670BB12B5B9CFC00A270B0 /* smalltestingfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BB02B5B9CFC00A270B0 /* smalltestingfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 		34670B9E2B58B63300A270B0 /* PaperdollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollUITests.swift; sourceTree = "<group>"; };
 		34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		34670BAD2B59F10500A270B0 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		34670BB02B5B9CFC00A270B0 /* anothertestfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = anothertestfile.swift; sourceTree = "<group>"; };
+		34670BB02B5B9CFC00A270B0 /* smalltestingfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smalltestingfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				34670B7E2B58B63100A270B0 /* PaperdollApp.swift */,
-				34670BB02B5B9CFC00A270B0 /* anothertestfile.swift */,
+				34670BB02B5B9CFC00A270B0 /* smalltestingfile.swift */,
 				34670B802B58B63100A270B0 /* ContentView.swift */,
 				34670BAD2B59F10500A270B0 /* test.swift */,
 				34670B822B58B63300A270B0 /* Assets.xcassets */,
@@ -270,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34670B882B58B63300A270B0 /* Persistence.swift in Sources */,
-				34670BB12B5B9CFC00A270B0 /* anothertestfile.swift in Sources */,
+				34670BB12B5B9CFC00A270B0 /* smalltestingfile.swift in Sources */,
 				34670B8B2B58B63300A270B0 /* Paperdoll.xcdatamodeld in Sources */,
 				34670B812B58B63100A270B0 /* ContentView.swift in Sources */,
 				34670BAE2B59F10500A270B0 /* test.swift in Sources */,
