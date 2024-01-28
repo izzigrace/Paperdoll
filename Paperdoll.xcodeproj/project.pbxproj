@@ -18,6 +18,8 @@
 		34670BA12B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */; };
 		34670BAE2B59F10500A270B0 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BAD2B59F10500A270B0 /* test.swift */; };
 		34670BB12B5B9CFC00A270B0 /* smalltestingfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34670BB02B5B9CFC00A270B0 /* smalltestingfile.swift */; };
+		34DE80C62B620BC40087C5BC /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE80C52B620BC40087C5BC /* LandingPage.swift */; };
+		34DE80C82B6605B80087C5BC /* RegisterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE80C72B6605B80087C5BC /* RegisterLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperdollUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		34670BAD2B59F10500A270B0 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		34670BB02B5B9CFC00A270B0 /* smalltestingfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smalltestingfile.swift; sourceTree = "<group>"; };
+		34DE80C52B620BC40087C5BC /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		34DE80C72B6605B80087C5BC /* RegisterLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,10 @@
 		34670B7D2B58B63100A270B0 /* Paperdoll */ = {
 			isa = PBXGroup;
 			children = (
+				34DE80C42B61DDC40087C5BC /* practice */,
 				34670B7E2B58B63100A270B0 /* PaperdollApp.swift */,
-				34670BB02B5B9CFC00A270B0 /* smalltestingfile.swift */,
-				34670B802B58B63100A270B0 /* ContentView.swift */,
-				34670BAD2B59F10500A270B0 /* test.swift */,
+				34DE80C52B620BC40087C5BC /* LandingPage.swift */,
+				34DE80C72B6605B80087C5BC /* RegisterLogin.swift */,
 				34670B822B58B63300A270B0 /* Assets.xcassets */,
 				34670B872B58B63300A270B0 /* Persistence.swift */,
 				34670B892B58B63300A270B0 /* Paperdoll.xcdatamodeld */,
@@ -137,6 +141,16 @@
 				34670BA02B58B63300A270B0 /* PaperdollUITestsLaunchTests.swift */,
 			);
 			path = PaperdollUITests;
+			sourceTree = "<group>";
+		};
+		34DE80C42B61DDC40087C5BC /* practice */ = {
+			isa = PBXGroup;
+			children = (
+				34670B802B58B63100A270B0 /* ContentView.swift */,
+				34670BB02B5B9CFC00A270B0 /* smalltestingfile.swift */,
+				34670BAD2B59F10500A270B0 /* test.swift */,
+			);
+			path = practice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34DE80C62B620BC40087C5BC /* LandingPage.swift in Sources */,
 				34670B882B58B63300A270B0 /* Persistence.swift in Sources */,
 				34670BB12B5B9CFC00A270B0 /* smalltestingfile.swift in Sources */,
 				34670B8B2B58B63300A270B0 /* Paperdoll.xcdatamodeld in Sources */,
+				34DE80C82B6605B80087C5BC /* RegisterLogin.swift in Sources */,
 				34670B812B58B63100A270B0 /* ContentView.swift in Sources */,
 				34670BAE2B59F10500A270B0 /* test.swift in Sources */,
 				34670B7F2B58B63100A270B0 /* PaperdollApp.swift in Sources */,

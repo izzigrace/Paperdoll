@@ -13,8 +13,14 @@ struct PaperdollApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ViewCoordinator()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+    }
+}
+
+struct PaperdollApp_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewCoordinator()
     }
 }

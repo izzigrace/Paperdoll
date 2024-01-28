@@ -48,7 +48,7 @@ struct UserProfileView: View {
                             .clipShape(Circle())  // Apply a circular clip shape
                             .overlay(
                                 Circle()
-                                    .stroke(Color(UIColor(hex: "3c4f74")), lineWidth: 2.1)
+                                    .stroke(Color("darkblue"), lineWidth: 2.1)
                                     .frame(width: 100, height: 85)  // Adjust the frame to increase the size of the circle
                             )  // Add a stroke (circle border)
                             .padding(.top, 2)
@@ -84,7 +84,7 @@ struct UserProfileView: View {
                 Rectangle() // rectangle behind all posts and buttons
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .frame(width: 375)
-                    .foregroundColor(Color(UIColor(hex: "f1f3f4")))
+                    .foregroundColor(Color("grey")) //the name i chose for the grey color in assets. in real app implementation, i would name it something like "rectanglebehindposts" and the asset would have a dark mode version and light mode version.
                     .cornerRadius(10)
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/) //dont know if i like this
                     .padding(.top, 185)
@@ -110,7 +110,7 @@ struct UserProfileView: View {
                 Rectangle() //moveable background indicating which button is selected
                     .frame(maxWidth: .infinity)
                     .frame(width: 60, height: 25)
-                    .foregroundColor(Color(UIColor(hex: "3c4f74")))
+                    .foregroundColor(Color("darkblue"))
                     .cornerRadius(19)
                     .padding(.top, -202)
                     .padding(.leading, CGFloat(location)) //CGFloat converts the variable -132 into the data type that padding expects, just using location without CGFloat will throw an error
@@ -330,28 +330,12 @@ struct MarketView: View {
     }
 }
 
-//this lets you use hex codes instead of names of colors. call it and insert the hex code like used in code ealier in file ^
-extension UIColor {
-    convenience init(hex: String, alpha: CGFloat = 1.0) {
-        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
-        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
 
-        var rgb: UInt64 = 0
-
-        Scanner(string: hexSanitized).scanHexInt64(&rgb)
-
-        self.init(red: CGFloat((rgb & 0xFF0000) >> 16) / 255.0,
-                  green: CGFloat((rgb & 0x00FF00) >> 8) / 255.0,
-                  blue: CGFloat(rgb & 0x0000FF) / 255.0,
-                  alpha: alpha)
-    }
-}
-
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfileView()
-    }
-}
+//struct UserProfileView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserProfileView()
+//    }
+//}
 
 //end of code that we actually use
 
