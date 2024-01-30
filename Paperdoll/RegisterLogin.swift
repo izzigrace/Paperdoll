@@ -9,9 +9,11 @@ import Foundation
 import SwiftUI
 
 struct RegisterLogin: View {
-    @State private var paddingWidth = 147 //idk
-    @State private var underlineWidth = 70
+    @State private var paddingWidth = 240
+    @State private var underlineWidth = 63
     @State private var loginClicked = true
+    @State private var buttonSpacerHeight = 450
+    @State private var colorBool = true
     
     var body: some View {
         ZStack {
@@ -22,44 +24,57 @@ struct RegisterLogin: View {
             }
             
             VStack {
-                Rectangle()
-                    .frame(width: 65, height: 1.5)
-                    .foregroundColor(Color("darkblue"))
-                    .padding(.trailing, CGFloat(paddingWidth))
-                Spacer()
-                    .frame(height: 420)
-            }
-            
-            
-            VStack {
                 HStack {
                     Button(action: {
-                        
+                        withAnimation {
+                            loginClicked.toggle()
+                            paddingWidth = 240
+                            underlineWidth = 63
+                            buttonSpacerHeight = 450
+                        }
+                        colorBool.toggle()
                     }) {
                         Text("LOGIN")
                             .font(.system(size: 20))
                             .fontWeight(.regular)
-                            .foregroundColor(Color("darkblue"))
+                            .foregroundColor(colorBool ? Color("darkblue") : .gray)
                     }
                     
                     Spacer()
                         .frame(width: 60)
                     
                     Button(action: {
-                        
+                        withAnimation {
+                            loginClicked.toggle()
+                            underlineWidth = 94
+                            paddingWidth = 90
+                            buttonSpacerHeight = 650
+                        }
+                        colorBool.toggle()
                     }) {
                         Text("REGISTER")
                             .font(.system(size: 20))
                             .fontWeight(.regular)
-                            .foregroundColor(Color("darkblue"))
+                            .foregroundColor(colorBool ? .gray : Color("darkblue"))
                     }
                 } // end hstack of login and register view buttons
+                Spacer()
+                    .frame(height: 1)
+                
+                HStack {
+                    Spacer()
+                    Rectangle() // line underneath login/register
+                        .frame(width: CGFloat(underlineWidth), height: 1.5)
+                        .foregroundColor(Color("darkblue"))
+                        .padding(.trailing, CGFloat(paddingWidth))
+                }
                 
                 Spacer()
-                    .frame(height: 450)
+//                    .frame(height: 650)
+                    .frame(height: CGFloat(buttonSpacerHeight))
                 
                 
-            } // end vstack of static components (login view button, register view button, etc)
+            } // end vstack of static components (login view button, register view button)
             
         } // end big zstack
     }
@@ -68,43 +83,26 @@ struct RegisterLogin: View {
 struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
+    @State private var viewPassword = false
     
     var body: some View {
         VStack {
-            Text("Username or email")
-                .font(.system(size: 14))
-                .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.gray)
+            Spacer()
+                .frame(height: 40)
             
-            TextField("Username", text: $username)
-                .padding()
-                .frame(width: 270, height: 45)
-                .background(Color("grey"))
-                .cornerRadius(8)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.gray, lineWidth: 0.3)
-                )
+            RegularTextBoxView(input: $username, expectedInput: "Username or email", textPaddingWidth: CGFloat(70))
             
-            Text("Password")
-                .font(.system(size: 14))
-                .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.gray)
+            Spacer()
+                .frame(height: 20)
             
-            TextField("Password", text: $password)
-                .padding()
-                .frame(width: 270, height: 45)
-                .background(Color("grey"))
-                .cornerRadius(8)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.gray, lineWidth: 0.3)
-                )
+            PasswordTextBoxView(input: $password, expectedInput: "Password", textPaddingWidth: CGFloat(70))
             
             Text("Forgot your password?")
                 .font(.system(size: 14))
                 .fontWeight(.semibold)
                 .foregroundColor(Color("darkblue"))
+                .padding(.leading, 110)
+                .padding(.top, 2)
             
             Spacer()
                 .frame(height: 40)
@@ -137,24 +135,288 @@ struct LoginView: View {
                         .font(.system(size: 20))
                         .fontWeight(.medium)
                     Spacer()
-                }
+                } // end hstack of google logo and text for google button
                 .frame(width: 270, height: 45)
                 .cornerRadius(8)
                 .overlay( /// apply a rounded border
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(.blue, lineWidth: 1)
                 )
-            }
-        }
+            } // end google button
+            
+        } // end big vstack
     }
 }
 
 struct RegisterView: View {
+    @State private var name = ""
+    @State private var email = ""
+    @State private var username = ""
+    @State private var password = ""
+    @State private var confirmPassword = ""
+    
     var body: some View {
         VStack {
+            RegularTextBoxView(input: $name, expectedInput: "Name", textPaddingWidth: CGFloat(70))
+                .padding(.bottom, 5)
+            RegularTextBoxView(input: $email, expectedInput: "Email", textPaddingWidth: CGFloat(70))
+                .padding(.bottom, 5)
+            RegularTextBoxView(input: $username, expectedInput: "Create a username", textPaddingWidth: CGFloat(70))
+                .padding(.bottom, 5)
+            PasswordTextBoxView(input: $password, expectedInput: "Password", textPaddingWidth: 70)
+            if (passwordChecker(password: password).count == 0) {
+                EmptyView()
+            } else {
+                Text(passwordChecker(password: password))
+                    .frame(width: 270)
+                    .font(.system(size: 12))
+                    .foregroundColor(.red)
+            }
             
+            PasswordTextBoxView(input: $confirmPassword, expectedInput: "Confirm password", textPaddingWidth: 70)
+            
+            Spacer()
+                .frame(height: 50)
+            
+            Button(action: {
+                        // Add your login action here
+                    }) {
+                        Text("Create Account")
+                            .font(.system(size: 22))
+                            .fontWeight(.semibold)
+                            .frame(width: 200, height: 45)
+                            .foregroundColor(.white)
+                            .background(Color("darkblue"))
+                            .cornerRadius(8)
+                    }
+            
+            Spacer()
+                .frame(height: 30)
+            
+            Button(action: {
+                // add action code here
+            }) {
+                HStack {
+                    Spacer()
+                    Image("googlelogo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 40)
+                    Text("Sign up with Google")
+                        .font(.system(size: 20))
+                        .fontWeight(.medium)
+                    Spacer()
+                } // end hstack of google logo and text for google button
+                .frame(width: 270, height: 45)
+                .cornerRadius(8)
+                .overlay( /// apply a rounded border
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(.blue, lineWidth: 1)
+                )
+            } // end google button
+
+        } // end big vstack
+    }
+}
+
+struct RegularTextBoxView: View {
+    @Binding var input: String
+    var expectedInput: String
+    var textPaddingWidth: CGFloat
+    
+    // i guess we can check to see if the expectedInput is "username" and if it is, we can apply the checking function to see if its in the database or too long / short
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text(expectedInput)
+                    .font(.system(size: 14))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.gray)
+                    .padding(.leading, textPaddingWidth)
+                Spacer()
+            }
+            
+            Spacer()
+                .frame(height: 2)
+            
+            TextField("Required", text: $input)
+                .padding()
+                .frame(width: 270, height: 45)
+                .background(Color("grey"))
+                .accentColor(Color("darkblue"))
+                .cornerRadius(8)
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.gray, lineWidth: 0.3)
+                )
         }
     }
+}
+
+struct PasswordTextBoxView: View {
+    @Binding var input: String
+    @State private var viewPassword = false
+    var expectedInput: String
+    var textPaddingWidth: CGFloat
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text(expectedInput)
+                    .font(.system(size: 14))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.gray)
+                    .padding(.leading, textPaddingWidth)
+                Spacer()
+            }
+            
+            Spacer()
+                .frame(height: 2)
+            
+            HStack {
+                Spacer()
+                    .frame(width: 30)
+                
+                Group {
+                    if viewPassword {
+                        TextField("Required", text: $input)
+                    } else {
+                        SecureField("Required", text: $input)
+                    }
+                } //end password field options group
+                .padding()
+                .frame(width: 270, height: 45)
+                .background(Color("grey"))
+                .cornerRadius(8)
+                .accentColor(Color("darkblue"))
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.gray, lineWidth: 0.3)
+                ) // end properties for password field options group
+                
+                Spacer()
+                    .frame(width: 10)
+                
+                Button(action: {
+                    viewPassword.toggle()
+                }) {
+                    Image(systemName: viewPassword ? "eye.slash" : "eye")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20)
+                        .foregroundColor(.gray)
+                }
+            } //end hstack for password field and eye image
+            
+        } // end big vstack
+    }
+}
+//struct ConfirmPasswordTextBoxView: View {
+//    @Binding var input: String
+//    @State private var viewPassword = false
+//    var expectedInput: String
+//    var textPaddingWidth: CGFloat
+//    
+//    var body: some View {
+//        VStack {
+//            HStack {
+//                Text(expectedInput)
+//                    .font(.system(size: 14))
+//                    .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+//                    .foregroundColor(.gray)
+//                    .padding(.leading, textPaddingWidth)
+//                Spacer()
+//            }
+//            
+//            Spacer()
+//                .frame(height: 2)
+//            
+//            HStack {
+//                Spacer()
+//                    .frame(width: 30)
+//                
+//                Group {
+//                    if viewPassword {
+//                        TextField("Required", text: $input)
+//                    } else {
+//                        SecureField("Required", text: $input)
+//                    }
+//                } //end password field options group
+//                .padding()
+//                .frame(width: 270, height: 45)
+//                .background(Color("grey"))
+//                .cornerRadius(8)
+//                .accentColor(Color("darkblue"))
+//                .textInputAutocapitalization(.never)
+//                .disableAutocorrection(true)
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 8)
+//                        .stroke(Color.gray, lineWidth: 0.3)
+//                ) // end properties for password field options group
+//                
+//                Spacer()
+//                    .frame(width: 10)
+//                
+//                Button(action: {
+//                    viewPassword.toggle()
+//                }) {
+//                    Image(systemName: viewPassword ? "eye.slash" : "eye")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 20)
+//                        .foregroundColor(.gray)
+//                }
+//            } //end hstack for password field and eye image
+//            
+//        } // end big vstack
+//    }
+//}
+
+func usernameChecker(username: String) -> String {
+    let validCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.1234567890"
+    if (username.count > 30) {
+        return "Username is too long"
+    }
+    
+    for letter in username {
+        if (!validCharacters.contains(letter)) {
+            return "Username contains invalid characters"
+        }
+    }
+    
+    return ""
+}
+
+func passwordChecker(password: String) -> String {
+    var includesNum = false
+    var includesSpecials = false
+    var includesUppercase = false
+    let nums = "1234567890"
+    var nonSpecials = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+    let uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    
+    for char in password {
+        if (nums.contains(char)) {
+            includesNum = true
+        }
+        if (!nonSpecials.contains(char)) {
+            includesSpecials = true
+        }
+        if (uppercases.contains(char)) {
+            includesUppercase = true
+        }
+    }
+    
+    if (password.count < 8 || !includesSpecials || !includesNum || !includesUppercase) {
+        return "Password must include at least 8 characters, one uppercase, and one special character"
+    }
+    
+    return ""
 }
 
 struct RegisterLogin_Previews: PreviewProvider {

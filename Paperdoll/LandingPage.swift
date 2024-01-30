@@ -138,11 +138,11 @@ struct LogoView: View {
                 Spacer()
             } // end logo vstack =
             .scaleEffect(scale)
-            .onAppear{
-                withAnimation(.easeIn(duration: 0.7)) {
-                    self.scale = 0.9
-                }
-            }
+//            .onAppear{
+//                withAnimation(.easeIn(duration: 0.7)) {
+//                    self.scale = 0.9
+//                }
+//            }
             .frame(width: 500, height: 1000)
             .background(Color("darkblue"))
         } //end big vstack
