@@ -168,10 +168,13 @@ struct RegisterView: View {
                 EmptyView()
             } else {
                 Text(passwordChecker(password: password))
+                    .multilineTextAlignment(.center)
                     .frame(width: 270)
                     .font(.system(size: 12))
                     .foregroundColor(.red)
             }
+            
+                //parent: store JUST final information, and bools for whether they passed the tests or not. use the bools to validate before registering. in the individual textboxes, you can update your strings to test and display the warnings if they dont pass. update the parent bools on every update to the text whether they are valid or not
             
             PasswordTextBoxView(input: $confirmPassword, expectedInput: "Confirm password", textPaddingWidth: 70)
             
@@ -223,6 +226,8 @@ struct RegularTextBoxView: View {
     @Binding var input: String
     var expectedInput: String
     var textPaddingWidth: CGFloat
+    @State private var borderColor = Color.gray
+    @State private var borderWeight = 0.3
     
     // i guess we can check to see if the expectedInput is "username" and if it is, we can apply the checking function to see if its in the database or too long / short
     
@@ -239,8 +244,16 @@ struct RegularTextBoxView: View {
             
             Spacer()
                 .frame(height: 2)
-            
-            TextField("Required", text: $input)
+            //maybe instead of making the text related to $input here, make it equal to a local variable that is just for validating the string, and once its valid we can update input by saying $input = string or whatever
+            TextField("Required", text: $input, onEditingChanged: { status in
+                if (status) {
+                    borderColor = Color("darkblue")
+                    borderWeight = 1
+                } else {
+                    borderColor = Color.gray
+                    borderWeight = 0.3
+                }
+            })
                 .padding()
                 .frame(width: 270, height: 45)
                 .background(Color("grey"))
@@ -250,7 +263,7 @@ struct RegularTextBoxView: View {
                 .disableAutocorrection(true)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.gray, lineWidth: 0.3)
+                        .stroke(borderColor, lineWidth: borderWeight)
                 )
         }
     }
