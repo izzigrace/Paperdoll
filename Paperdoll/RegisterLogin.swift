@@ -27,12 +27,12 @@ struct RegisterLogin: View {
                 HStack {
                     Button(action: {
                         withAnimation {
-                            loginClicked.toggle()
+                            loginClicked = true
                             paddingWidth = 240
                             underlineWidth = 63
                             buttonSpacerHeight = 450
                         }
-                        colorBool.toggle()
+                        colorBool = true
                     }) {
                         Text("LOGIN")
                             .font(.system(size: 20))
@@ -45,12 +45,12 @@ struct RegisterLogin: View {
                     
                     Button(action: {
                         withAnimation {
-                            loginClicked.toggle()
+                            loginClicked = false
                             underlineWidth = 94
                             paddingWidth = 90
                             buttonSpacerHeight = 650
                         }
-                        colorBool.toggle()
+                        colorBool = false
                     }) {
                         Text("REGISTER")
                             .font(.system(size: 20))
