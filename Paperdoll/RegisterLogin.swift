@@ -329,6 +329,10 @@ struct PasswordTextBoxView: View {
         } // end big vstack
     }
 }
+//so im thinking i will make a different view for the password and confirm password views. for the password view in register, ill check if the password is a valid one and if not ill display the red text that says password must contain bla bla bla. then since its being made in the inner password view and not in the main register view, hoopefully everything will just get pushed away once it shows up since the padding in the outer view stays the same around the call to the inner password view? if that makes sense lol
+
+
+
 //struct ConfirmPasswordTextBoxView: View {
 //    @Binding var input: String
 //    @State private var viewPassword = false
